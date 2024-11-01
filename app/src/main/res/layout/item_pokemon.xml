@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="model"
+            type="com.example.pokeapp.domain.model.PokemonModel" />
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/small"
+        app:cardElevation="@dimen/small"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/activity_vertical_margin"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image_event"
+                android:layout_width="@dimen/width_default_image_list"
+                android:layout_height="@dimen/width_default_image_list"
+                loadImageUrl="@{model.fullImageUrl}"
+                app:shapeAppearanceOverlay="@style/RoundedRectangle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_items"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_event">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{model.name}"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    tools:text="Name"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

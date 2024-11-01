@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PokeApp</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="error_network">Conexión a internet no disponible.</string>
+
+    <string name="register">Register</string>
+    <string name="create">Create</string>
+    <string name="login">Login</string>
+    <string name="start">Start</string>
+    <string name="name">Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="sendEmail">Verify your email</string>
+    <string name="errorLogin">Incorrect email or password. Please try again.</string>
+    <string name="errorRegister">Please try again</string>
+    <string name="forgotPassword">Forgot your password?</string>
+    <string name="createAccount">Create new account</string>
+    <string name="loadMore">Load more</string>
+    <string name="errorDetail">Error loading detail, not found</string>
+    <string name="error">An error occurred</string>
+</resources>
