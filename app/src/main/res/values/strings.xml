@@ -19,4 +19,5 @@
     <string name="loadMore">Load more</string>
     <string name="errorDetail">Error loading detail, not found</string>
     <string name="error">An error occurred</string>
+    <string name="welcome">Welcome to PokeApp!</string>
 </resources>

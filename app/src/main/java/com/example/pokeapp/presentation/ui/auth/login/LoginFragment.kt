@@ -48,6 +48,11 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             val response = it ?: return@observe
             when (response) {
                 is Resource.Success -> {
+                    Toast.makeText(
+                        requireContext(),
+                        getString(R.string.welcome),
+                        Toast.LENGTH_LONG
+                    ).show()
                     preferences.setData(true, SharedPreferences.LOGGED_IN)
                     startActivity(Intent(context, MainActivity::class.java))
                     this@LoginFragment.activity?.finish()
